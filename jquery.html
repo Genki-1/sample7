@@ -19,7 +19,11 @@
   <script src="js/jquery.min.js"></script>
   <script>
     $.getJSON('https://h2o-space.com/htmlbook/images.php', function(data) {
-      alert('データを受信しました');
+      for (var i=0; i<data.length; i++) {
+        $('<div class="photo"></div>')
+          .append('<img src="' + data[i].path + '">')
+          .append('<div src="inner"><p>' + data[i].caption + '<span>' + data[i].name + '</span></p></div>')
+      }
     });
   </script>
 
