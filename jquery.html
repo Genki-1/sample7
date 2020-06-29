@@ -22,12 +22,10 @@
       for (var i=0; i<data.length; i++) {
         $('<div class="photo"></div>')
           .append('<img src="' + data[i].path + '">')
-          .append('<div src="inner"><p>' + data[i].caption + '<span>' + data[i].name + '</span></p></div>')
-          .append('#img_unit')
+          .append('<div class="inner"><p>' + data[i].caption + '<span>' + data[i].name + '</span></p></div>')
+          .appendTo('#img_unit');
       }
     });
   </script>
-
-
 </body>
 </html>
